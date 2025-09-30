@@ -1,1 +1,6 @@
 /*    /index.html   200
+
+# Clean URL redirects for services
+/esg-executive-search    /index.html   200
+/sustainability-recruitment    /index.html   200
+/esg-advisory    /index.html   200

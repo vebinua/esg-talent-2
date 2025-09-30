@@ -10,9 +10,10 @@ import { generateGEOContent, generateGEOCitations } from '../utils/geoOptimizati
 
 interface ServicesPageProps {
   onPageChange: (page: string) => void;
+  onServicePageChange?: (servicePath: string) => void;
 }
 
-const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange }) => {
+const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange, onServicePageChange }) => {
   const services = [
     {
       icon: Search,

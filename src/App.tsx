@@ -51,6 +51,12 @@ function App() {
       
       if (pathSegments.length === 0) {
         setCurrentPage('home');
+      } else if (pathSegments[0] === 'esg-executive-search') {
+        setCurrentPage('services');
+      } else if (pathSegments[0] === 'sustainability-recruitment') {
+        setCurrentPage('services');
+      } else if (pathSegments[0] === 'esg-advisory') {
+        setCurrentPage('services');
       } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
         setCurrentPage('article');
         setCurrentArticleId(pathSegments[1]);
@@ -73,7 +79,19 @@ function App() {
   // Handle browser refresh - ensure URL matches current page
   useEffect(() => {
     const path = window.location.pathname;
-    const expectedPath = currentPage === 'home' ? '/' : `/${currentPage}`;
+    let expectedPath = '/';
+    
+    if (currentPage === 'home') {
+      expectedPath = '/';
+    } else if (currentPage === 'services') {
+      // Don't change URL if already on a service-specific path
+      if (path === '/esg-executive-search' || path === '/sustainability-recruitment' || path === '/esg-advisory') {
+        return;
+      }
+      expectedPath = `/${currentPage}`;
+    } else {
+      expectedPath = `/${currentPage}`;
+    }
     
     // If URL doesn't match current page, update the page state
     if (path !== expectedPath && currentPage) {
@@ -81,6 +99,8 @@ function App() {
       
       if (pathSegments.length === 0) {
         setCurrentPage('home');
+      } else if (pathSegments[0] === 'esg-executive-search' || pathSegments[0] === 'sustainability-recruitment' || pathSegments[0] === 'esg-advisory') {
+        setCurrentPage('services');
       } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
         setCurrentPage('article');
         setCurrentArticleId(pathSegments[1]);
@@ -119,6 +139,12 @@ function App() {
     const url = page === 'home' ? '/' : `/${page}`;
     window.history.pushState(null, '', url);
     // Immediately scroll to top when page changes
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  const handleServicePageChange = (servicePath: string) => {
+    setCurrentPage('services');
+    window.history.pushState(null, '', `/${servicePath}`);
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
@@ -167,11 +193,11 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'home':
-        return <PremiumHomePage onPageChange={handlePageChange} />;
+        return <PremiumHomePage onPageChange={handlePageChange} onServicePageChange={handleServicePageChange} />;
       case 'about':
         return <AboutPage onPageChange={handlePageChange} onProfileChange={handleProfileChangeWithSection} />;
       case 'services':
-        return <ServicesPage onPageChange={handlePageChange} />;
+        return <ServicesPage onPageChange={handlePageChange} onServicePageChange={handleServicePageChange} />;
       case 'sustainability':
         return <SustainabilityPage onPageChange={handlePageChange} />;
       case 'insights':

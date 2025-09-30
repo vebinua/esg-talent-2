@@ -27,7 +27,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData
 }) => {
   const fullTitle = title.includes('ESG Talent') ? title : `${title} | ESG Talent`;
-  const fullUrl = url.startsWith('http') ? url : `https://esg-talent.com${url}`;
+  const fullUrl = url.startsWith('http') ? url : `https://esg-talent.com${url === '/' ? '' : url}`;
   const fullImage = image.startsWith('http') ? image : `https://esg-talent.com${image}`;
 
   return (

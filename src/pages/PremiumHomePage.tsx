@@ -12,9 +12,10 @@ import { generateGEOContent, generateGEOCitations } from '../utils/geoOptimizati
 
 interface PremiumHomePageProps {
   onPageChange: (page: string) => void;
+  onServicePageChange?: (servicePath: string) => void;
 }
 
-const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
+const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange, onServicePageChange }) => {
   const services = [
     {
       icon: Search,
@@ -311,7 +312,12 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
                   
                   <button
                     onClick={() => {
-                      onPageChange('services');
+                      const servicePaths = ['esg-executive-search', 'sustainability-recruitment', 'esg-advisory'];
+                      if (onServicePageChange) {
+                        onServicePageChange(servicePaths[index]);
+                      } else {
+                        onPageChange('services');
+                      }
                       // Use a longer delay and check multiple times for element availability
                       const scrollToSection = () => {
                         const sectionIds = ['esg-executive-search', 'sustainability-recruitment', 'esg-advisory'];
