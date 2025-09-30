@@ -155,9 +155,9 @@ const CareersPage: React.FC<CareersPageProps> = ({ onPageChange }) => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Career Opportunities - Join ESG Talent's Global Team"
-        description="Discover exciting ESG career opportunities with leading organizations worldwide. Transform your career in sustainability and help organizations find their next ESG champions."
-        keywords="ESG careers, sustainability jobs, executive search careers, ESG recruitment jobs, environmental careers, social impact jobs"
+        title="ESG Careers & Sustainability Job Portal | Impact Leadership Jobs"
+        description="Discover ESG career opportunities and sustainability jobs with leading organizations. ESG job portal featuring corporate sustainability jobs, ESG advisory positions, and green leadership roles worldwide."
+        keywords="ESG careers, sustainability jobs, ESG job portal, impact leadership jobs, corporate sustainability jobs, ESG advisory jobs, green jobs executive search, sustainability career opportunities, ESG consulting recruitment"
         url="/careers"
         structuredData={[
           organizationSchema,

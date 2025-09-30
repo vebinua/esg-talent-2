@@ -72,6 +72,10 @@ const PremiumHeader: React.FC<PremiumHeaderProps> = ({ currentPage, onPageChange
                         : 'text-white/90 hover:text-white'
                   } ${currentPage === item.id ? 'border-2 border-dotted border-[#43ab04] px-3 py-1 rounded-lg' : ''} focus:outline-none`}
                   aria-current={currentPage === item.id ? 'page' : undefined}
+                  title={item.id === 'services' ? 'ESG Executive Search & Sustainability Recruitment Services' : 
+                         item.id === 'careers' ? 'ESG Careers & Sustainability Job Portal' :
+                         item.id === 'insights' ? 'ESG Leadership Insights & Industry Trends' :
+                         item.id === 'about' ? 'Global ESG Leadership Network & Team' : item.name}
                 >
                   {item.name}
                 </button>

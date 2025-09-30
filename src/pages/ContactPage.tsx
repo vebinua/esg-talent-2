@@ -83,9 +83,9 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Connect With Us - ESG Talent Contact Information"
-        description="Ready to transform your ESG strategy? Contact our experts to discuss your talent needs and discover how we can help you build a sustainable future."
-        keywords="contact ESG talent, ESG consultation, sustainability advisory, executive search contact, ESG recruitment inquiry"
+        title="Contact ESG Talent | International ESG Recruitment Specialist"
+        description="Ready to hire ESG leaders? Contact our international ESG recruitment specialists. Get expert ESG leadership hiring advice and discover our global sustainability talent hub."
+        keywords="contact ESG talent, international ESG recruitment specialist, ESG leadership hiring, global sustainability talent hub, ESG talent marketplace, hire ESG leaders consultation"
         url="/contact"
         structuredData={[
           organizationSchema,

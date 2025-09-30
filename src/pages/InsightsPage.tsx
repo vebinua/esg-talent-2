@@ -118,9 +118,9 @@ const InsightsPage: React.FC<InsightsPageProps> = ({ onPageChange, onArticleChan
   return (
     <div className="min-h-screen bg-gray-50">
       <SEOHead
-        title="ESG Insights - Expert Perspectives on Sustainability Leadership"
-        description="Expert insights on ESG leadership, sustainability trends, and best practices from our global team of ESG professionals and consultants."
-        keywords="ESG insights, sustainability leadership, ESG trends, climate risk, sustainable finance, ESG reporting, supply chain sustainability"
+        title="ESG Leadership Insights | Future of Work in ESG & Sustainability Trends"
+        description="Expert insights on ESG transformation leadership, sustainability trends, and how to hire ESG leaders. Best practices from our global ESG talent marketplace and leadership network."
+        keywords="ESG transformation leadership, future of work in ESG, ESG leadership hiring, sustainability leadership network, ESG impact careers, ESG transformation leaders, climate leadership recruitment"
         url="/insights"
         structuredData={[
           organizationSchema,

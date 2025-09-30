@@ -16,23 +16,23 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange }) => {
   const services = [
     {
       icon: Search,
-      title: 'Executive Search',
-      subtitle: 'Strategic Leadership Identification',
+      title: 'ESG Executive Search',
+      subtitle: 'Strategic ESG Leadership Identification',
       description: 'Our Executive Search service isn\'t just about filling roles; it\'s about strategically identifying and securing the transformative Sustainability and ESG leaders your organization needs to thrive in a competitive landscape. We\'ve meticulously crafted this service to precisely align with the unique demands of senior and highly specialized niche placements, where conventional recruitment methods simply fall short.',
       extendedDescription: 'At the core of our approach is a dedicated, specialist Resourcing Team, a powerhouse of seasoned experts who operate with surgical precision. They don\'t just sift through resumes; they proactively and discretely navigate the intricate web of the passive candidate pool. This involves deep market mapping, extensive networking, and a nuanced understanding of industry ecosystems to uncover those exceptional individuals who aren\'t actively seeking new opportunities but possess the exact blend of skills, experience, and cultural fit your organization requires. By engaging these elusive top-tier professionals, we ensure you gain access to talent that can genuinely drive innovation, foster growth, and deliver unparalleled value. Our method is less about volume and more about pinpoint accuracy, guaranteeing that every candidate presented is a meticulously vetted and highly qualified potential game-changer for your team.',
       image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     },
     {
       icon: Users,
-      title: 'Permanent Recruitment',
-      subtitle: 'Global Market Expertise',
+      title: 'Sustainability Recruitment',
+      subtitle: 'Global Sustainability Talent Expertise',
       description: 'We possess a profound grasp of our clients\' intricate dynamics and complexities of needing permanent recruitment services, from sourcing to endorsing to hiring entry level to managerial sustainability and ESG professionals from various industries.',
       extendedDescription: 'We\'re driven by an unwavering commitment to leverage our extensive market expertise, empowering both our valued clients and exceptional candidates with a distinct competitive advantage in today\'s dynamic global landscape. We meticulously navigate the nuances of international talent acquisition, ensuring a seamless and effective journey for all involved.',
       image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
     },
     {
       icon: Award,
-      title: 'Lestari Advisory and Consulting Services',
+      title: 'ESG Advisory and Consulting Services',
       subtitle: 'Strategic ESG Business Intelligence',
       description: 'In today\'s rapidly evolving global landscape, where stakeholder expectations, regulatory pressures, and market demands for responsible practices are intensifying, our ESG and Sustainability Business Advisory and Consulting Services provide essential strategic guidance and actionable solutions.',
       extendedDescription: 'We empower organizations to seamlessly integrate environmental, social, and governance principles not merely as compliance requirements, but as fundamental drivers of long-term value creation and competitive advantage.',
@@ -56,9 +56,9 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange }) => {
     >
     <div className="min-h-screen bg-white">
       <SEOHead
-        title="Our Services - ESG Executive Search & Business Advisory"
-        description="Comprehensive ESG talent solutions: Executive Search, Permanent Recruitment, and ESG Business Advisory. Setting the standard for sustainable talent acquisition."
-        keywords="ESG executive search, permanent recruitment, ESG advisory, sustainability consulting, talent acquisition, ESG business intelligence"
+        title="ESG Executive Search & Sustainability Recruitment Services | ESG Talent"
+        description="Leading ESG recruitment agency offering executive search, sustainability leadership recruitment, and ESG advisory services. How to hire ESG leaders with proven expertise across global markets."
+        keywords="ESG executive search, sustainability recruitment agency, ESG headhunters, sustainability leadership recruitment, hire ESG leaders, ESG advisory, ESG consulting firms hiring, green leadership recruitment, impact leadership coaching"
         url="/services"
         structuredData={[
           organizationSchema,
@@ -111,7 +111,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange }) => {
                 delay={index * 200}
               >
               <div 
-                id={index === 0 ? 'executive-search' : index === 1 ? 'permanent-recruitment' : 'lestari-advisory'}
+                id={index === 0 ? 'esg-executive-search' : index === 1 ? 'sustainability-recruitment' : 'esg-advisory'}
                 className="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
               >
                 <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>

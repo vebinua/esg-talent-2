@@ -77,9 +77,9 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
     >
     <main className="min-h-screen overflow-hidden">
       <SEOHead
-        title="ESG Talent - Transform Your Sustainable Future"
-        description="Leading global executive search, recruitment and business advisory in sustainability and ESG. Setting the standard for sustainable talent solutions worldwide."
-        keywords="ESG talent, sustainability recruitment, executive search, ESG advisory, sustainable business, environmental recruitment, social governance, ESG consulting"
+        title="ESG Executive Search | Global Sustainability Recruitment Experts - ESG Talent"
+        description="Find the right ESG leaders for your business. Specialists in sustainability recruitment across APAC, Europe, and the Middle East. Global ESG talent leader with 500+ successful placements."
+        keywords="ESG executive search, sustainability recruitment, ESG headhunters, hire ESG leaders, global ESG talent leader, sustainability leadership recruitment, ESG careers, impact leadership jobs, ESG recruitment agency"
         url="/"
         structuredData={[organizationSchema, websiteSchema]}
       />
@@ -133,15 +133,17 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
               <button
                 onClick={() => onPageChange('services')}
                 className="btn-grad text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300"
+                title="ESG Executive Search & Sustainability Recruitment Services"
               >
-                Explore Our Services
+                Explore ESG Executive Search
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
                 onClick={() => onPageChange('contact')}
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#43ab04] hover:border-[#43ab04] hover:text-white transition-all duration-300 transform hover:scale-105"
+                title="Contact ESG Recruitment Specialists"
               >
-                Get Started Today
+                Hire ESG Leaders Today
               </button>
             </div>
           </div>
@@ -212,17 +214,17 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
           <ScrollAnimationWrapper animation="fade-up">
             <div className="text-center mb-10">
               <h2 className="text-4xl md:text-5xl font-bold text-[#04548c] mb-6">
-                Why ESG Talent?
+                Why Choose Our ESG Recruitment Agency?
               </h2>
               <div className="max-w-5xl mx-auto space-y-4">
                 <p className="text-2xl font-semibold text-[#04548c]">
-                  We combine recruitment expertise with ESG knowledge – connecting sustainability-driven organizations with the professionals who can deliver impact.
+                  We are the best ESG recruitment agency combining deep recruitment expertise with ESG knowledge – connecting sustainability-driven organizations with the professionals who can deliver impact.
                 </p>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  At ESG Talent, we specialize in finding and placing ESG leaders who combine purpose with performance that are shaping a more sustainable world. As ESG practitioners ourselves, we understand the complexities, the standards, and the urgency that define the sustainability space today.
+                  As a global ESG talent leader, we specialize in finding and placing ESG leaders who combine purpose with performance. Our ESG talent network spans across APAC, Europe, and the Middle East, helping you discover where to find sustainability talent.
                 </p>
                 <p className="text-lg font-semibold text-gray-800">
-                  We go beyond matching resumés to job descriptions — we align people, purpose, and performance by delivering the right talent to achieve your sustainability goals.
+                  We go beyond matching resumés to job descriptions — we are your international ESG recruitment specialist aligning people, purpose, and performance to achieve your sustainability transformation goals.
                 </p>
               </div>
             </div>
@@ -231,7 +233,7 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
           <ScrollAnimationWrapper animation="fade-up" delay={200}>
             <div className="text-center mb-8">
               <h3 className="text-3xl font-bold text-[#04548c] mb-8">
-                What Sets Us Apart:
+                What Makes Us the Best ESG Recruitment Agency:
               </h3>
             </div>
           </ScrollAnimationWrapper>
@@ -264,8 +266,8 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
             <div className="text-center mt-10">
               <div className="bg-gradient-to-br from-[#04548c] to-[#023d67] rounded-2xl p-6 text-white max-w-4xl mx-auto">
                 <p className="text-lg leading-relaxed">
-                  Whether you're scaling your ESG team or seeking your next meaningful role, 
-                  <span className="font-semibold"> ESG Talent is your trusted partner for sustainable success.</span>
+                  Whether you need to hire ESG leaders or seeking ESG career opportunities, 
+                  <span className="font-semibold"> ESG Talent is your global sustainability talent hub for sustainable success.</span>
                 </p>
               </div>
             </div>
@@ -279,10 +281,10 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
           <ScrollAnimationWrapper animation="fade-up">
             <div className="text-center mb-10">
               <h2 className="text-4xl md:text-5xl font-bold text-[#04548c] mb-6">
-                Our Services
+                ESG Executive Search & Sustainability Recruitment Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive ESG talent solutions designed to meet your organization's unique sustainability objectives.
+                Leading ESG recruitment agency offering comprehensive sustainability talent solutions. Learn how to hire ESG leaders and build world-class sustainability teams.
               </p>
             </div>
           </ScrollAnimationWrapper>
@@ -312,7 +314,7 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
                       onPageChange('services');
                       // Use a longer delay and check multiple times for element availability
                       const scrollToSection = () => {
-                        const sectionIds = ['executive-search', 'permanent-recruitment', 'lestari-advisory'];
+                        const sectionIds = ['esg-executive-search', 'sustainability-recruitment', 'esg-advisory'];
                         const element = document.getElementById(sectionIds[index]);
                         if (element) {
                           element.scrollIntoView({ behavior: 'smooth' });
@@ -324,6 +326,9 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange }) => {
                       setTimeout(scrollToSection, 500);
                     }}
                     className="text-[#43ab04] group-hover:text-white font-semibold flex items-center group-hover:translate-x-2 transition-all duration-300 mt-auto cursor-pointer"
+                    title={index === 0 ? 'ESG Executive Search Services' : 
+                           index === 1 ? 'Sustainability Recruitment Services' : 
+                           'ESG Advisory Services'}
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />

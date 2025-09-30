@@ -350,9 +350,9 @@ Markus has a wealth of continuing education including a Masters of Science in In
     >
     <div className="min-h-screen">
       <SEOHead
-        title="About ESG Talent - Leading ESG Executive Search & Advisory"
-        description="Meet our global team of ESG professionals. Learn about our mission, values, and commitment to building sustainable organizations through exceptional talent."
-        keywords="ESG team, sustainability experts, executive search consultants, ESG advisory board, JEDI principles, diversity equity inclusion"
+        title="About ESG Talent - Global ESG Leadership Network & Sustainability Experts"
+        description="Meet our global ESG leadership network. Best ESG recruitment agency with sustainability experts across APAC, Europe, and Middle East. Learn how we find sustainability talent for Fortune 500 companies."
+        keywords="global ESG leadership network, ESG talent network, sustainability experts, best ESG recruitment agencies, where to find sustainability talent, ESG leadership hiring, diversity and inclusion in ESG"
         url="/about"
         structuredData={[
           organizationSchema,
