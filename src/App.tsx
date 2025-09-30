@@ -32,6 +32,12 @@ function App() {
     
     if (pathSegments.length === 0) {
       setCurrentPage('home');
+    } else if (pathSegments[0] === 'about-us') {
+      setCurrentPage('about');
+    } else if (pathSegments[0] === 'our-services') {
+      setCurrentPage('services');
+    } else if (pathSegments[0] === 'career-opportunities') {
+      setCurrentPage('careers');
     } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
       setCurrentPage('article');
       setCurrentArticleId(pathSegments[1]);
@@ -51,6 +57,12 @@ function App() {
       
       if (pathSegments.length === 0) {
         setCurrentPage('home');
+      } else if (pathSegments[0] === 'about-us') {
+        setCurrentPage('about');
+      } else if (pathSegments[0] === 'our-services') {
+        setCurrentPage('services');
+      } else if (pathSegments[0] === 'career-opportunities') {
+        setCurrentPage('careers');
       } else if (pathSegments[0] === 'esg-executive-search') {
         setCurrentPage('services');
       } else if (pathSegments[0] === 'sustainability-recruitment') {
@@ -83,12 +95,16 @@ function App() {
     
     if (currentPage === 'home') {
       expectedPath = '/';
+    } else if (currentPage === 'about') {
+      expectedPath = '/about-us';
+    } else if (currentPage === 'careers') {
+      expectedPath = '/career-opportunities';
     } else if (currentPage === 'services') {
       // Don't change URL if already on a service-specific path
-      if (path === '/esg-executive-search' || path === '/sustainability-recruitment' || path === '/esg-advisory') {
+      if (path === '/our-services' || path === '/esg-executive-search' || path === '/sustainability-recruitment' || path === '/esg-advisory') {
         return;
       }
-      expectedPath = `/${currentPage}`;
+      expectedPath = '/our-services';
     } else {
       expectedPath = `/${currentPage}`;
     }
@@ -99,6 +115,12 @@ function App() {
       
       if (pathSegments.length === 0) {
         setCurrentPage('home');
+      } else if (pathSegments[0] === 'about-us') {
+        setCurrentPage('about');
+      } else if (pathSegments[0] === 'our-services') {
+        setCurrentPage('services');
+      } else if (pathSegments[0] === 'career-opportunities') {
+        setCurrentPage('careers');
       } else if (pathSegments[0] === 'esg-executive-search' || pathSegments[0] === 'sustainability-recruitment' || pathSegments[0] === 'esg-advisory') {
         setCurrentPage('services');
       } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
@@ -136,7 +158,35 @@ function App() {
   const handlePageChange = (page: string) => {
     setCurrentPage(page);
     // Update URL
-    const url = page === 'home' ? '/' : `/${page}`;
+    let url = '/';
+    switch (page) {
+      case 'home':
+        url = '/';
+        break;
+      case 'about':
+        url = '/about-us';
+        break;
+      case 'services':
+        url = '/our-services';
+        break;
+      case 'careers':
+        url = '/career-opportunities';
+        break;
+      case 'sustainability':
+        url = '/sustainability';
+        break;
+      case 'insights':
+        url = '/insights';
+        break;
+      case 'contact':
+        url = '/contact';
+        break;
+      case 'privacy-policy':
+        url = '/privacy-policy';
+        break;
+      default:
+        url = `/${page}`;
+    }
     window.history.pushState(null, '', url);
     // Immediately scroll to top when page changes
     window.scrollTo({ top: 0, behavior: 'instant' });
@@ -173,7 +223,23 @@ function App() {
 
   const handlePageChangeFromProfile = (page: string) => {
     setCurrentPage(page);
-    const url = page === 'home' ? '/' : `/${page}`;
+    let url = '/';
+    switch (page) {
+      case 'home':
+        url = '/';
+        break;
+      case 'about':
+        url = '/about-us';
+        break;
+      case 'services':
+        url = '/our-services';
+        break;
+      case 'careers':
+        url = '/career-opportunities';
+        break;
+      default:
+        url = `/${page}`;
+    }
     window.history.pushState(null, '', url);
     if (page === 'about' && profileSection) {
       // Small delay to allow page to load, then scroll to section

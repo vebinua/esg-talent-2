@@ -16,7 +16,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://esg-talent.com/about</loc>
+    <loc>https://esg-talent.com/about-us</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -24,7 +24,7 @@
 
   <!-- Services Page -->
   <url>
-    <loc>https://esg-talent.com/services</loc>
+    <loc>https://esg-talent.com/our-services</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -72,7 +72,7 @@
 
   <!-- Career Opportunities Page -->
   <url>
-    <loc>https://esg-talent.com/careers</loc>
+    <loc>https://esg-talent.com/career-opportunities</loc>
     <lastmod>2024-12-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>

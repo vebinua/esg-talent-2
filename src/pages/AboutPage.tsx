@@ -358,7 +358,7 @@ Markus has a wealth of continuing education including a Masters of Science in In
           organizationSchema,
           breadcrumbSchema([
             { name: 'Home', url: 'https://esg-talent.com/' },
-            { name: 'About Us', url: 'https://esg-talent.com/about' }
+            { name: 'About Us', url: 'https://esg-talent.com/about-us' }
           ])
         ]}
       />

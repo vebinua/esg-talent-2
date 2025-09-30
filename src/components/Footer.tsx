@@ -63,11 +63,11 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
             <h4 className="text-blue-200 font-semibold text-base">Quick Links</h4>
             <ul className="space-y-2">
               {[
-                { label: 'Global ESG Leadership Network', id: 'about' },
-                { label: 'ESG Executive Search Services', id: 'services' },
+                { label: 'Global ESG Leadership Network', id: 'about', url: '/about-us' },
+                { label: 'ESG Executive Search Services', id: 'services', url: '/our-services' },
                 { label: 'Sustainability', id: 'sustainability' },
                 { label: 'ESG Leadership Insights', id: 'insights' },
-                { label: 'ESG Careers & Jobs', id: 'careers' }
+                { label: 'ESG Careers & Jobs', id: 'careers', url: '/career-opportunities' }
               ].map(link => (
                 <li key={link.id}>
                   <button
@@ -76,7 +76,8 @@ const Footer: React.FC<FooterProps> = ({ onPageChange }) => {
                     }}
                     className="text-blue-200 hover:text-white transition-all duration-300 text-xs text-left transform hover:translate-x-2"
                     title={link.id === 'services' ? 'ESG Executive Search & Sustainability Recruitment' : 
-                           link.id === 'careers' ? 'ESG Career Opportunities & Sustainability Jobs' : link.label}
+                           link.id === 'careers' ? 'ESG Career Opportunities & Sustainability Jobs' : 
+                           link.id === 'about' ? 'Global ESG Leadership Network & Team' : link.label}
                   >
                     {link.label}
                   </button>

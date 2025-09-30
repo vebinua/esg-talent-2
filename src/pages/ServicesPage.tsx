@@ -65,7 +65,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange, onServicePage
           organizationSchema,
           breadcrumbSchema([
             { name: 'Home', url: 'https://esg-talent.com/' },
-            { name: 'Our Services', url: 'https://esg-talent.com/services' }
+            { name: 'Our Services', url: 'https://esg-talent.com/our-services' }
           ])
         ]}
       />

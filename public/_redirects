@@ -1,5 +1,10 @@
 /*    /index.html   200
 
+# Clean URL redirects for main pages
+/about-us    /index.html   200
+/our-services    /index.html   200
+/career-opportunities    /index.html   200
+
 # Clean URL redirects for services
 /esg-executive-search    /index.html   200
 /sustainability-recruitment    /index.html   200

@@ -163,7 +163,7 @@ const CareersPage: React.FC<CareersPageProps> = ({ onPageChange }) => {
           organizationSchema,
           breadcrumbSchema([
             { name: 'Home', url: 'https://esg-talent.com/' },
-            { name: 'Career Opportunities', url: 'https://esg-talent.com/careers' }
+            { name: 'Career Opportunities', url: 'https://esg-talent.com/career-opportunities' }
           ]),
           ...filteredJobs.map(job => jobPostingSchema({
             title: job.title,
