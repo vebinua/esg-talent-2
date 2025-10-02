@@ -7,6 +7,7 @@ import AIOptimizedContent from '../components/AIOptimizedContent';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 import LogoSlider from '../components/LogoSlider';
 import { generateGEOContent, generateGEOCitations } from '../utils/geoOptimization';
+import { trackESGEvent } from '../utils/analytics';
 
 interface ServicesPageProps {
   onPageChange: (page: string) => void;
@@ -151,7 +152,10 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onPageChange, onServicePage
                     {/* CTA Button */}
                     <div className="pt-1">
                      <button
-                            onClick={() => onPageChange('contact')}
+                            onClick={() => {
+                              trackESGEvent.serviceView(service.title);
+                              onPageChange('contact');
+                            }}
                             className="btn-grad-sm"
                           >
                             <span>Get Started</span>

@@ -5,6 +5,7 @@ import SEOHead from '../components/SEOHead';
 import { organizationSchema, breadcrumbSchema, jobPostingSchema } from '../utils/structuredData';
 import { JobOpportunity } from '../types';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { trackESGEvent } from '../utils/analytics';
 
 interface CareersPageProps {
   onPageChange: (page: string) => void;
@@ -114,6 +115,10 @@ const CareersPage: React.FC<CareersPageProps> = ({ onPageChange }) => {
     
     // Clear any previous error
     setCvError('');
+    
+    // Track CV submission
+    trackESGEvent.cvUpload();
+    trackESGEvent.jobApplication('general_application');
     
     // Submit CV to LOXO API
     const submitCV = async () => {

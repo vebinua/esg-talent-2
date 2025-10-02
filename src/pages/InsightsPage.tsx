@@ -3,6 +3,7 @@ import { Calendar, User, ArrowRight, Search, Filter, Clock, Tag, Eye } from 'luc
 import SEOHead from '../components/SEOHead';
 import { organizationSchema, breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { trackESGEvent } from '../utils/analytics';
 
 interface InsightsPageProps {
   onPageChange: (page: string) => void;
@@ -112,6 +113,10 @@ const InsightsPage: React.FC<InsightsPageProps> = ({ onPageChange, onArticleChan
   const regularArticles = filteredArticles.filter(article => !article.featured);
 
   const handleArticleClick = (articleId: string) => {
+    const article = articles.find(a => a.id === articleId);
+    if (article) {
+      trackESGEvent.articleRead(article.title);
+    }
     onArticleChange(articleId);
   };
 
@@ -400,6 +405,7 @@ const InsightsPage: React.FC<InsightsPageProps> = ({ onPageChange, onArticleChan
                   className="flex-1 px-4 py-3 rounded-2xl border-0 focus:ring-2 focus:ring-white focus:border-transparent"
                 />
                 <button className="bg-[#43ab04] text-white px-6 py-3 rounded-2xl font-semibold hover:bg-[#369003] transition-all duration-200 transform hover:scale-102">
+                  onClick={() => trackESGEvent.newsletterSignup()}
                   Subscribe
                 </button>
               </div>
