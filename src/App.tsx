@@ -12,6 +12,7 @@ import SustainabilityPage from './pages/SustainabilityPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import GDPRCompliancePage from './pages/GDPRCompliancePage';
 import InsightsPage from './pages/InsightsPage';
 import ArticlePage from './pages/ArticlePage';
 import ProfilePage from './pages/ProfilePage';
@@ -40,6 +41,8 @@ function App() {
       setCurrentPage('services');
     } else if (pathSegments[0] === 'career-opportunities') {
       setCurrentPage('careers');
+    } else if (pathSegments[0] === 'privacy-policy' && pathSegments[1] === 'gdpr') {
+      setCurrentPage('gdpr-compliance');
     } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
       setCurrentPage('article');
       setCurrentArticleId(pathSegments[1]);
@@ -78,6 +81,9 @@ function App() {
       } else if (pathSegments[0] === 'esg-advisory') {
         setCurrentPage('services');
         trackPageView('/esg-advisory', 'ESG Advisory - ESG Talent');
+      } else if (pathSegments[0] === 'privacy-policy' && pathSegments[1] === 'gdpr') {
+        setCurrentPage('gdpr-compliance');
+        trackPageView('/privacy-policy/gdpr', 'GDPR Compliance - ESG Talent');
       } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
         setCurrentPage('article');
         setCurrentArticleId(pathSegments[1]);
@@ -205,6 +211,10 @@ function App() {
         url = '/privacy-policy';
         title = 'Privacy Policy - ESG Talent';
         break;
+      case 'gdpr-compliance':
+        url = '/privacy-policy/gdpr';
+        title = 'GDPR Compliance - ESG Talent';
+        break;
       default:
         url = `/${page}`;
         title = `${page} - ESG Talent`;
@@ -303,6 +313,8 @@ function App() {
         return <ContactPage onPageChange={handlePageChange} />;
       case 'privacy-policy':
         return <PrivacyPolicyPage onPageChange={handlePageChange} />;
+      case 'gdpr-compliance':
+        return <GDPRCompliancePage onPageChange={handlePageChange} />;
       default:
         return <PremiumHomePage onPageChange={handlePageChange} />;
     }
