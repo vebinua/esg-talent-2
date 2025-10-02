@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin, Globe, Target } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
