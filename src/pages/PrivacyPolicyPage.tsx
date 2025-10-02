@@ -363,6 +363,146 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
                 </p>
               </div>
 
+              {/* ESG Talent - Candidate Privacy Notice */}
+              <div className="mb-8 bg-gradient-to-br from-blue-50 to-gray-50 p-8 rounded-2xl border border-blue-200">
+                <h2 className="text-3xl font-bold text-[#04548c] mb-6 flex items-center">
+                  <Users className="h-8 w-8 mr-3" />
+                  ESG Talent – Candidate Privacy Notice
+                </h2>
+                <div className="bg-[#04548c]/10 p-4 rounded-xl mb-6">
+                  <p className="text-[#04548c] font-semibold text-center">
+                    (GDPR Compliant)
+                  </p>
+                  <p className="text-gray-700 text-center mt-2">
+                    <strong>Last Updated:</strong> October 1, 2025
+                  </p>
+                </div>
+                
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  At ESG Talent, we take your privacy seriously and are committed to protecting your personal data. This Privacy Notice explains how we collect, use, store, and share your data as part of our recruitment and executive search services.
+                </p>
+
+                {/* 1. Who We Are */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">1. Who We Are</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    ESG Talent is a recruitment and executive search firm specializing in ESG and sustainability leadership. We operate globally, with headquarters in Singapore.
+                  </p>
+                  <p className="text-gray-700 leading-relaxed">
+                    If you have any questions regarding this notice, please contact us: <a href="mailto:info@esg-talent.com" className="text-[#04548c] hover:underline font-semibold">info@esg-talent.com</a>
+                  </p>
+                </div>
+
+                {/* 2. What Data We Collect */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">2. What Data We Collect</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    We may collect and process the following personal data:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                    <li>Contact details (name, email, phone number, address)</li>
+                    <li>Curriculum Vitae (CV), work history, skills, and qualifications</li>
+                    <li>References, certifications, and professional achievements</li>
+                    <li>Compensation and benefits details (only where voluntarily provided)</li>
+                    <li>Interview notes and assessments</li>
+                  </ul>
+                </div>
+
+                {/* 3. How We Use Your Data */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">3. How We Use Your Data</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    Your data will only be used for recruitment purposes, including:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                    <li>Matching your profile with suitable opportunities</li>
+                    <li>Sharing your CV and relevant details with potential clients</li>
+                    <li>Communicating with you about job opportunities, interviews, or career updates</li>
+                    <li>Maintaining candidate records in our secure database</li>
+                  </ul>
+                </div>
+
+                {/* 4. Who We Share Data With */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">4. Who We Share Data With</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    We may share your data with:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                    <li>ESG Talent's clients for the purpose of considering you for a role</li>
+                    <li>Trusted third-party service providers (e.g., recruitment platforms, assessment providers)</li>
+                  </ul>
+                  <p className="text-gray-700 leading-relaxed font-semibold">
+                    We will never sell your data.
+                  </p>
+                </div>
+
+                {/* 5. How Long We Keep Your Data */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">5. How Long We Keep Your Data</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    We will store your personal data for <strong>24 months</strong> unless:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                    <li>You withdraw your consent earlier, or</li>
+                    <li>There is a legal requirement to retain it longer.</li>
+                  </ul>
+                </div>
+
+                <hr className="border-gray-300 my-6" />
+
+                {/* 6. Your Rights (Under GDPR) */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">6. Your Rights (Under GDPR)</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    You have the right to:
+                  </p>
+                  <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1">
+                    <li>Access the personal data we hold about you</li>
+                    <li>Request correction of inaccurate or incomplete data</li>
+                    <li>Request deletion of your data at any time</li>
+                    <li>Withdraw consent for processing at any time</li>
+                    <li>Request data portability (transfer of your data)</li>
+                  </ul>
+                  <p className="text-gray-700 leading-relaxed">
+                    To exercise these rights, please contact us at <a href="mailto:info@esg-talent.com" className="text-[#04548c] hover:underline font-semibold">info@esg-talent.com</a>
+                  </p>
+                </div>
+
+                {/* 7. Data Security */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">7. Data Security</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We use appropriate technical and organizational measures to ensure your personal data is secure and protected against unauthorized access, alteration, or disclosure.
+                  </p>
+                </div>
+
+                {/* 8. Updates to This Notice */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-[#04548c] mb-3">8. Updates to This Notice</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We may update this Privacy Notice from time to time. Any updates will be posted on our website or shared with you directly.
+                  </p>
+                </div>
+
+                {/* Contact Information Highlight */}
+                <div className="bg-white p-6 rounded-xl border border-[#04548c]/20 mt-6">
+                  <div className="flex items-center mb-3">
+                    <Mail className="h-5 w-5 text-[#04548c] mr-3" />
+                    <h4 className="text-lg font-semibold text-[#04548c]">Questions About Your Data?</h4>
+                  </div>
+                  <p className="text-gray-700 mb-3">
+                    For any questions about how we handle your personal data or to exercise your GDPR rights, please contact us:
+                  </p>
+                  <div className="flex items-center">
+                    <Mail className="h-4 w-4 text-[#04548c] mr-2" />
+                    <a href="mailto:info@esg-talent.com" className="text-[#04548c] hover:underline font-semibold">
+                      info@esg-talent.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </ScrollAnimationWrapper>
         </div>
