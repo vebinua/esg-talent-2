@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { AccessibilityProvider } from './components/AccessibilityProvider';
 import CookieConsent from './components/CookieConsent';
-import GoogleAnalytics from './components/GoogleAnalytics';
+import GoogleTagManager from './components/GoogleTagManager';
 import PremiumHeader from './components/PremiumHeader';
 import Footer from './components/Footer';
 import PremiumHomePage from './pages/PremiumHomePage';
@@ -19,7 +19,7 @@ import TawkToChat from './components/TawkToChat';
 import TemporaryChatButton from './components/TemporaryChatButton';
 import ESGCursor from './components/LeafCursor';
 import BackToTopButton from './components/BackToTopButton';
-import { trackPageView } from './utils/analytics';
+import { trackPageView } from './utils/gtm';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('');
@@ -311,7 +311,7 @@ function App() {
   return (
     <AccessibilityProvider>
       <div className="min-h-screen flex flex-col">
-        <GoogleAnalytics measurementId="G-XXXXXXXXXX" />
+        <GoogleTagManager gtmId="GTM-M9N4H2VG" />
         <ESGCursor />
 
         {/* Skip Links */}

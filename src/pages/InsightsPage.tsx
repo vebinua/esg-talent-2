@@ -3,7 +3,7 @@ import { Calendar, User, ArrowRight, Search, Filter, Clock, Tag, Eye } from 'luc
 import SEOHead from '../components/SEOHead';
 import { organizationSchema, breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
-import { trackESGEvent } from '../utils/analytics';
+import { trackESGEvent } from '../utils/gtm';
 
 interface InsightsPageProps {
   onPageChange: (page: string) => void;
@@ -115,7 +115,7 @@ const InsightsPage: React.FC<InsightsPageProps> = ({ onPageChange, onArticleChan
   const handleArticleClick = (articleId: string) => {
     const article = articles.find(a => a.id === articleId);
     if (article) {
-      trackESGEvent.articleRead(article.title);
+      trackESGEvent.articleRead(article.title, article.author, article.category);
     }
     onArticleChange(articleId);
   };

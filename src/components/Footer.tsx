@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, MapPin, Users, Facebook, Instagram } from 'lucide-react';
-import { trackESGEvent } from '../utils/analytics';
+import { trackESGEvent } from '../utils/gtm';
 
 interface FooterProps {
   onPageChange: (page: string) => void;

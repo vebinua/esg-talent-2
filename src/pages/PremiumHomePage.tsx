@@ -9,6 +9,7 @@ import { organizationSchema, websiteSchema } from '../utils/structuredData';
 import CursorFollower from '../components/CursorFollower';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 import { generateGEOContent, generateGEOCitations } from '../utils/geoOptimization';
+import { trackESGEvent } from '../utils/analytics';
 
 interface PremiumHomePageProps {
   onPageChange: (page: string) => void;
@@ -132,7 +133,10 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange, onServi
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               <button
-                onClick={() => onPageChange('services')}
+                onClick={() => {
+                  trackESGEvent.serviceView('ESG Executive Search');
+                  onPageChange('services');
+                }}
                 className="btn-grad text-lg px-8 py-4 transform hover:scale-105 transition-all duration-300"
                 title="ESG Executive Search & Sustainability Recruitment Services"
               >
@@ -140,7 +144,10 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange, onServi
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button
-                onClick={() => onPageChange('contact')}
+                onClick={() => {
+                  trackESGEvent.contactForm('hero_cta');
+                  onPageChange('contact');
+                }}
                 className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#43ab04] hover:border-[#43ab04] hover:text-white transition-all duration-300 transform hover:scale-105"
                 title="Contact ESG Recruitment Specialists"
               >
@@ -313,6 +320,7 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange, onServi
                   <button
                     onClick={() => {
                       const servicePaths = ['esg-executive-search', 'sustainability-recruitment', 'esg-advisory'];
+                      trackESGEvent.serviceView(service.title);
                       if (onServicePageChange) {
                         onServicePageChange(servicePaths[index]);
                       } else {
@@ -406,7 +414,10 @@ const PremiumHomePage: React.FC<PremiumHomePageProps> = ({ onPageChange, onServi
                       Connect with our experts to discuss your talent needs and discover how we can help you build a sustainable future.
                     </p>
                     <button
-                      onClick={() => onPageChange('contact')}
+                      onClick={() => {
+                        trackESGEvent.contactForm('cta_section');
+                        onPageChange('contact');
+                      }}
                       className="bg-[#43ab04] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#369003] transition-all duration-300 transform hover:scale-105"
                     >
                       Start Your Journey

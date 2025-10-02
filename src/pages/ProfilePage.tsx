@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Mail, Phone, Linkedin, MapPin, Building, Quote, 
 import SEOHead from '../components/SEOHead';
 import { personSchema, breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
+import { trackESGEvent } from '../utils/gtm';
 
 interface ProfilePageProps {
   profileId: string;
@@ -228,6 +229,11 @@ Bernard has a bachelor's degree in Business Management (General Management), a T
       </div>
     );
   }
+
+  // Track profile view
+  React.useEffect(() => {
+    trackESGEvent.profileView(profile.name, profile.type);
+  }, [profile.name, profile.type]);
 
   return (
     <div className="min-h-screen bg-white">

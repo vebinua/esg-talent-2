@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Linkedin, MessageCircle, Send, Clock, Globe, Faceb
 import SEOHead from '../components/SEOHead';
 import { organizationSchema, breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
-import { trackESGEvent, trackServiceInquiry } from '../utils/analytics';
+import { trackESGEvent } from '../utils/gtm';
 
 interface ContactPageProps {
   onPageChange: (page: string) => void;
@@ -25,8 +25,8 @@ const ContactPage: React.FC<ContactPageProps> = ({ onPageChange }) => {
     console.log('Contact form submitted:', contactForm);
     
     // Track the contact form submission
-    trackESGEvent.contactForm('website_form');
-    trackServiceInquiry(contactForm.service || 'general_inquiry');
+    trackESGEvent.contactForm('website_form', contactForm);
+    trackESGEvent.serviceInquiry(contactForm.service || 'general_inquiry');
     
     alert('Thank you for your inquiry! We will respond within 24 hours.');
     setContactForm({

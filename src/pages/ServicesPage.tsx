@@ -7,7 +7,7 @@ import AIOptimizedContent from '../components/AIOptimizedContent';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
 import LogoSlider from '../components/LogoSlider';
 import { generateGEOContent, generateGEOCitations } from '../utils/geoOptimization';
-import { trackESGEvent } from '../utils/analytics';
+import { trackESGEvent } from '../utils/gtm';
 
 interface ServicesPageProps {
   onPageChange: (page: string) => void;
