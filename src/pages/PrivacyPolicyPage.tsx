@@ -37,8 +37,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
       {/* Privacy Policy Content */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollAnimationWrapper animation="fade-up">
-            <div className="prose prose-lg max-w-none">
+          <div className="prose prose-lg max-w-none">
+            <ScrollAnimationWrapper animation="fade-up">
               
               {/* Introduction */}
               <div className="mb-8">
@@ -467,8 +467,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
                 </div>
               </div>
 
-            </div>
-          </ScrollAnimationWrapper>
+            </ScrollAnimationWrapper>
+          </div>
         </div>
       </section>
 
