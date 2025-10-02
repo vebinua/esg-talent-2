@@ -363,6 +363,31 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
                 </p>
               </div>
 
+              <div className="flex items-center justify-between pt-8 border-t border-gray-200">
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() => onPageChange('gdpr-compliance')}
+                    className="bg-[#04548c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#023d67] transition-all duration-300 transform hover:scale-105 flex items-center"
+                  >
+                    <Shield className="h-5 w-5 mr-2" />
+                    View GDPR Compliance
+                  </button>
+                  <button
+                    onClick={() => {
+                      // Navigate to privacy policy and scroll to cookies section
+                      const cookiesSection = document.getElementById('cookies-section');
+                      if (cookiesSection) {
+                        cookiesSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className="bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all duration-300 flex items-center"
+                  >
+                    <Globe className="h-5 w-5 mr-2" />
+                    Cookie Policy
+                  </button>
+                </div>
+              </div>
+
             </div>
           </ScrollAnimationWrapper>
         </div>
