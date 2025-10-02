@@ -36,32 +36,6 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
       {/* Privacy Policy Content */}
       <section className="py-12 bg-white">
-          {/* GDPR Candidate Privacy Notice Link */}
-          <ScrollAnimationWrapper animation="fade-up">
-            <div className="mb-8">
-              <div className="bg-gradient-to-br from-blue-600 to-[#04548c] p-6 rounded-2xl text-white">
-                <div className="flex items-center mb-4">
-                  <Shield className="h-8 w-8 mr-3" />
-                  <div>
-                    <h3 className="text-xl font-bold">GDPR Candidate Privacy Notice</h3>
-                    <p className="text-blue-200">Specialized privacy notice for job candidates</p>
-                  </div>
-                </div>
-                <p className="text-blue-100 mb-4">
-                  If you're a job candidate or considering opportunities with ESG Talent, please review our 
-                  specialized GDPR-compliant privacy notice that explains how we handle your recruitment data.
-                </p>
-                <button
-                  onClick={() => onPageChange('gdpr-compliance')}
-                  className="bg-white text-[#04548c] px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center"
-                >
-                  <Shield className="h-5 w-5 mr-2" />
-                  View GDPR Candidate Notice
-                </button>
-              </div>
-            </div>
-          </ScrollAnimationWrapper>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimationWrapper animation="fade-up">
             <div className="prose prose-lg max-w-none">
