@@ -43,6 +43,8 @@ function App() {
       setCurrentPage('careers');
     } else if (pathSegments[0] === 'privacy-policy' && pathSegments[1] === 'gdpr') {
       setCurrentPage('gdpr-compliance');
+    } else if (pathSegments[0] === 'privacy-policy' && pathSegments[1] === 'gdpr') {
+      setCurrentPage('gdpr-compliance');
     } else if (pathSegments[0] === 'insights' && pathSegments[1]) {
       setCurrentPage('article');
       setCurrentArticleId(pathSegments[1]);
@@ -72,6 +74,9 @@ function App() {
       } else if (pathSegments[0] === 'career-opportunities') {
         setCurrentPage('careers');
         trackPageView('/career-opportunities', 'Career Opportunities - ESG Talent');
+      } else if (pathSegments[0] === 'privacy-policy' && pathSegments[1] === 'gdpr') {
+        setCurrentPage('gdpr-compliance');
+        trackPageView('/privacy-policy/gdpr', 'GDPR Compliance - ESG Talent');
       } else if (pathSegments[0] === 'esg-executive-search') {
         setCurrentPage('services');
         trackPageView('/esg-executive-search', 'ESG Executive Search - ESG Talent');
@@ -215,6 +220,10 @@ function App() {
         url = '/privacy-policy/gdpr';
         title = 'GDPR Compliance - ESG Talent';
         break;
+      case 'gdpr-compliance':
+        url = '/privacy-policy/gdpr';
+        title = 'GDPR Compliance - ESG Talent';
+        break;
       default:
         url = `/${page}`;
         title = `${page} - ESG Talent`;
@@ -313,6 +322,8 @@ function App() {
         return <ContactPage onPageChange={handlePageChange} />;
       case 'privacy-policy':
         return <PrivacyPolicyPage onPageChange={handlePageChange} />;
+      case 'gdpr-compliance':
+        return <GDPRCompliancePage onPageChange={handlePageChange} />;
       case 'gdpr-compliance':
         return <GDPRCompliancePage onPageChange={handlePageChange} />;
       default:
