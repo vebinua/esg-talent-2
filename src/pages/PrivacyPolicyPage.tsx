@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin } from 'lucide-react';
+import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
@@ -234,10 +234,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Do we make automated decisions */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <Target className="h-8 w-8 mr-3" />
-                  Do we make automated decisions?
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Do we make automated decisions?</h2>
                 <p className="text-gray-700 leading-relaxed">
                   We do not envisage that any decisions will be made about you using automated means. However, we will notify you if this position changes.
                 </p>
@@ -245,10 +242,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Third-party disclosure */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <FileText className="h-8 w-8 mr-3" />
-                  Third-party disclosure
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Third-party disclosure</h2>
                 <p className="text-gray-700 leading-relaxed">
                   We do not sell, trade, or otherwise transfer to outside parties your personal information.
                 </p>
@@ -256,10 +250,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Third-party links */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <Globe className="h-8 w-8 mr-3" />
-                  Third-party links
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Third-party links</h2>
                 <p className="text-gray-700 leading-relaxed">
                   Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We, therefore, have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
                 </p>
@@ -267,10 +258,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Google */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <Globe className="h-8 w-8 mr-3" />
-                  Google
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Google</h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users.
                 </p>
@@ -289,10 +277,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Transfer of personal information overseas */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <Globe className="h-8 w-8 mr-3" />
-                  Transfer of personal information overseas (e.g. from within the EEA to outside the EEA)?
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Transfer of personal information overseas (e.g. from within the EEA to outside the EEA)?</h2>
                 <p className="text-gray-700 leading-relaxed">
                   When our partners who help us in the administration or operation of our organization are based in other locations, your information may be transferred outside of your country. When your personal data is transferred from within the EEA to outside the EEA, we will always ensure that there is a proper legal agreement or other legal basis that covers the data transfer. When we send your information from a country (not in the EEA) to outside of that country, we will make sure that your information is protected to at least the same standard as that which is required in the originating country, and will work with any such third parties to make sure that they have reasonable security arrangements in place. We may also transfer your information outside of your country in relation to business opportunities but we would only do this with your consent.
                 </p>
@@ -300,10 +285,7 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Changes to this Privacy Policy */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
-                  <FileText className="h-8 w-8 mr-3" />
-                  Changes to this Privacy Policy
-                </h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Changes to this Privacy Policy</h2>
                 <p className="text-gray-700 leading-relaxed">
                   We may change this Privacy Policy from time to time, to reflect changes at ESG Talent, or for legal or regulatory reasons. Unless we are unable to do so, we will give you reasonable notice of any changes to this Privacy Policy, which may be by notifying you via email and/or by posting an updated version on our website.
                 </p>
