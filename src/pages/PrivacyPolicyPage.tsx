@@ -1,5 +1,5 @@
 import React from 'react';
-import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin, Globe } from 'lucide-react';
+import { Shield, Eye, Lock, Users, FileText, Mail, Phone, MapPin } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { breadcrumbSchema } from '../utils/structuredData';
 import ScrollAnimationWrapper from '../components/ScrollAnimationWrapper';
@@ -37,8 +37,8 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
       {/* Privacy Policy Content */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <ScrollAnimationWrapper animation="fade-up">
+          <ScrollAnimationWrapper animation="fade-up">
+            <div className="prose prose-lg max-w-none">
               
               {/* Introduction */}
               <div className="mb-8">
@@ -234,7 +234,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Do we make automated decisions */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Do we make automated decisions?</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <Target className="h-8 w-8 mr-3" />
+                  Do we make automated decisions?
+                </h2>
                 <p className="text-gray-700 leading-relaxed">
                   We do not envisage that any decisions will be made about you using automated means. However, we will notify you if this position changes.
                 </p>
@@ -242,7 +245,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Third-party disclosure */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Third-party disclosure</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <FileText className="h-8 w-8 mr-3" />
+                  Third-party disclosure
+                </h2>
                 <p className="text-gray-700 leading-relaxed">
                   We do not sell, trade, or otherwise transfer to outside parties your personal information.
                 </p>
@@ -250,7 +256,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Third-party links */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Third-party links</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <Globe className="h-8 w-8 mr-3" />
+                  Third-party links
+                </h2>
                 <p className="text-gray-700 leading-relaxed">
                   Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies. We, therefore, have no responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to protect the integrity of our site and welcome any feedback about these sites.
                 </p>
@@ -258,7 +267,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Google */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Google</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <Globe className="h-8 w-8 mr-3" />
+                  Google
+                </h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Google's advertising requirements can be summed up by Google's Advertising Principles. They are put in place to provide a positive experience for users.
                 </p>
@@ -277,7 +289,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Transfer of personal information overseas */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Transfer of personal information overseas (e.g. from within the EEA to outside the EEA)?</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <Globe className="h-8 w-8 mr-3" />
+                  Transfer of personal information overseas (e.g. from within the EEA to outside the EEA)?
+                </h2>
                 <p className="text-gray-700 leading-relaxed">
                   When our partners who help us in the administration or operation of our organization are based in other locations, your information may be transferred outside of your country. When your personal data is transferred from within the EEA to outside the EEA, we will always ensure that there is a proper legal agreement or other legal basis that covers the data transfer. When we send your information from a country (not in the EEA) to outside of that country, we will make sure that your information is protected to at least the same standard as that which is required in the originating country, and will work with any such third parties to make sure that they have reasonable security arrangements in place. We may also transfer your information outside of your country in relation to business opportunities but we would only do this with your consent.
                 </p>
@@ -285,7 +300,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
 
               {/* Changes to this Privacy Policy */}
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-[#04548c] mb-4">Changes to this Privacy Policy</h2>
+                <h2 className="text-3xl font-bold text-[#04548c] mb-4 flex items-center">
+                  <FileText className="h-8 w-8 mr-3" />
+                  Changes to this Privacy Policy
+                </h2>
                 <p className="text-gray-700 leading-relaxed">
                   We may change this Privacy Policy from time to time, to reflect changes at ESG Talent, or for legal or regulatory reasons. Unless we are unable to do so, we will give you reasonable notice of any changes to this Privacy Policy, which may be by notifying you via email and/or by posting an updated version on our website.
                 </p>
@@ -345,133 +363,10 @@ const PrivacyPolicyPage: React.FC<PrivacyPolicyPageProps> = ({ onPageChange }) =
                 </p>
               </div>
 
-              {/* ESG Talent Candidate Privacy Notice */}
-              <div className="mb-8 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border-2 border-blue-200">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-3xl font-bold text-[#04548c] flex items-center">
-                    <Shield className="h-8 w-8 mr-3" />
-                    ESG Talent – Candidate Privacy Notice
-                  </h2>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
-                    GDPR Compliant
-                  </span>
-                </div>
-                
-                <p className="text-gray-600 mb-6 italic">Last Updated: October 1, 2025</p>
-                
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  At ESG Talent, we take your privacy seriously and are committed to protecting your personal data. This Privacy Notice explains how we collect, use, store, and share your data as part of our recruitment and executive search services.
-                </p>
-
-                <div className="space-y-6">
-                  {/* 1. Who We Are */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">1. Who We Are</h3>
-                    <p className="text-gray-700 leading-relaxed mb-2">
-                      ESG Talent is a recruitment and executive search firm specializing in ESG and sustainability leadership. We operate globally, with headquarters in Singapore.
-                    </p>
-                    <p className="text-gray-700 leading-relaxed">
-                      If you have any questions regarding this notice, please contact us: <a href="mailto:info@esg-talent.com" className="text-[#04548c] hover:underline font-semibold">info@esg-talent.com</a>
-                    </p>
-                  </div>
-
-                  {/* 2. What Data We Collect */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">2. What Data We Collect</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      We may collect and process the following personal data:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                      <li>Contact details (name, email, phone number, address)</li>
-                      <li>Curriculum Vitae (CV), work history, skills, and qualifications</li>
-                      <li>References, certifications, and professional achievements</li>
-                      <li>Compensation and benefits details (only where voluntarily provided)</li>
-                      <li>Interview notes and assessments</li>
-                    </ul>
-                  </div>
-
-                  {/* 3. How We Use Your Data */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">3. How We Use Your Data</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      Your data will only be used for recruitment purposes, including:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                      <li>Matching your profile with suitable opportunities</li>
-                      <li>Sharing your CV and relevant details with potential clients</li>
-                      <li>Communicating with you about job opportunities, interviews, or career updates</li>
-                      <li>Maintaining candidate records in our secure database</li>
-                    </ul>
-                  </div>
-
-                  {/* 4. Who We Share Data With */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">4. Who We Share Data With</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      We may share your data with:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1 mb-3">
-                      <li>ESG Talent's clients for the purpose of considering you for a role</li>
-                      <li>Trusted third-party service providers (e.g., recruitment platforms, assessment providers)</li>
-                    </ul>
-                    <p className="text-gray-700 leading-relaxed font-semibold">
-                      We will never sell your data.
-                    </p>
-                  </div>
-
-                  {/* 5. How Long We Keep Your Data */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">5. How Long We Keep Your Data</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      We will store your personal data for <strong>24 months</strong> unless:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                      <li>You withdraw your consent earlier, or</li>
-                      <li>There is a legal requirement to retain it longer.</li>
-                    </ul>
-                  </div>
-
-                  {/* 6. Your Rights (Under GDPR) */}
-                  <div className="bg-white p-6 rounded-xl border border-blue-200">
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">6. Your Rights (Under GDPR)</h3>
-                    <p className="text-gray-700 leading-relaxed mb-3">
-                      You have the right to:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2 mb-4">
-                      <li>Access the personal data we hold about you</li>
-                      <li>Request correction of inaccurate or incomplete data</li>
-                      <li>Request deletion of your data at any time</li>
-                      <li>Withdraw consent for processing at any time</li>
-                      <li>Request data portability (transfer of your data)</li>
-                    </ul>
-                    <p className="text-gray-700 leading-relaxed">
-                      To exercise these rights, please contact us at <a href="mailto:info@esg-talent.com" className="text-[#04548c] hover:underline font-semibold">info@esg-talent.com</a>
-                    </p>
-                  </div>
-
-                  {/* 7. Data Security */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">7. Data Security</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      We use appropriate technical and organizational measures to ensure your personal data is secure and protected against unauthorized access, alteration, or disclosure.
-                    </p>
-                  </div>
-
-                  {/* 8. Updates to This Notice */}
-                  <div>
-                    <h3 className="text-xl font-bold text-[#04548c] mb-3">8. Updates to This Notice</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      We may update this Privacy Notice from time to time. Any updates will be posted on our website or shared with you directly.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-            </ScrollAnimationWrapper>
-          </div>
+            </div>
+          </ScrollAnimationWrapper>
         </div>
       </section>
-
     </div>
   );
 };
