@@ -12,6 +12,7 @@ import SustainabilityPage from './pages/SustainabilityPage';
 import CareersPage from './pages/CareersPage';
 import ContactPage from './pages/ContactPage';
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import GDPRCompliancePage from './pages/GDPRCompliancePage';
 import InsightsPage from './pages/InsightsPage';
 import ArticlePage from './pages/ArticlePage';
 import ProfilePage from './pages/ProfilePage';
@@ -303,6 +304,8 @@ function App() {
         return <ContactPage onPageChange={handlePageChange} />;
       case 'privacy-policy':
         return <PrivacyPolicyPage onPageChange={handlePageChange} />;
+      case 'gdpr-compliance':
+        return <GDPRCompliancePage onPageChange={handlePageChange} />;
       default:
         return <PremiumHomePage onPageChange={handlePageChange} />;
     }
